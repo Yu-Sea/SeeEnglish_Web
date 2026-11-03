@@ -13,19 +13,21 @@
 
 ## 页面内容
 
-页面是一条连续的产品叙事，底部 Dock 分为四个章节：
+现在官网由三个静态页面组成：
 
-1. **首页**：一本不会催你的英语笔记。没有每日任务、没有标准答案、只有可见的变化。
-2. **体验**：两个可操作的演示。
-   - 记词：词形匹配、补充 / 新建、例句、关联词和联想。
-   - 复习：先回想、再翻开、自己判断；每 5 次结算一次，展示全局总分和档位。
-3. **功能**：四个核心动作的详细说明。
-   - 记词：词形自动匹配，笔记没有固定格式。
-   - 复习：加权随机，5 次一档，一个总分。
-   - 词库：筛选、修改、归档、删除、JSON 导出。
-   - 个人：头像、名字、签名、30 天趋势和外观偏好。
-   - 最后是本地优先说明。
-4. **源码**：GitHub 直达地址和产品收束。
+1. **index.html**：介绍页
+   - 顶部品牌、介绍 / 下载 / 文档导航、GitHub 个人主页入口
+   - 首屏下载入口，指向下载页
+   - 原有的产品介绍、体验和功能内容继续保留
+   - 底部是使用文档入口、联系我们和站点页脚
+2. **download.html**：下载页
+   - Windows 安装包下载按钮
+   - 安装包版本、大小、系统要求
+   - 安装步骤、数据说明和 SmartScreen 提示
+3. **docs.html**：文档页
+   - 标准文档布局，左侧目录、右侧本页目录
+   - 安装、记词、复习、词库、个人设置、导入导出
+   - 本地 API 约定、接口表、curl 示例和常见问题
 
 ## 本地预览
 
@@ -39,44 +41,35 @@ python -m http.server 8899
 
 然后访问 `http://127.0.0.1:8899`。
 
-演示数据只保存在当前页面内存里，刷新即重置。
-
 ## 部署
 
-把 `site/` **里面的所有文件**上传到 Web 根目录即可，例如：
+这是纯静态站点，可以直接把 `site/` 里面的所有文件上传到 GitHub Pages、对象存储或任意静态服务器。
+
+GitHub Pages：
+
+- 把 `site/` 里的内容放到仓库根目录，或放到 Pages 发布目录
+- 保留 `.nojekyll`
+- `index.html` 会自动作为首页
+
+目录结构：
 
 ```text
-/var/www/seeenglish/
+/
 ├─ index.html
-├─ app.js
-├─ review-demo.js
+├─ download.html
+├─ docs.html
+├─ official.css
 ├─ base.css
 ├─ styles.css
 ├─ site-v2.css
+├─ app.js
+├─ review-demo.js
 ├─ robots.txt
 ├─ .nojekyll
 └─ assets/
 ```
 
-Nginx 示例：
-
-```nginx
-server {
-    listen 80;
-    server_name YOUR_PUBLIC_IP;
-
-    root /var/www/seeenglish;
-    index index.html;
-
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
-
-    location /assets/ {
-        add_header Cache-Control "public, max-age=31536000, immutable";
-    }
-}
-```
+所有站内链接都使用相对路径，不依赖域名或构建工具。
 
 这是一个静态单页站点，不需要 Node、Python 或反向代理。
 

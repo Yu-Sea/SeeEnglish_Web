@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./base.css" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./site-v2.css" />
+    <link rel="stylesheet" href="./official.css" />
     <title>SeeEnglish · 见词 — 一本不会催你的英语笔记</title>
   </head>
   <body>
@@ -181,7 +182,7 @@
     </div>
 
     <header class="site-header" id="site-header">
-      <a class="brand" href="#home" aria-label="SeeEnglish 首页">
+      <a class="brand" href="#intro" aria-label="SeeEnglish 首页">
         <span class="brand__mark">
           <span class="brand__letter">S</span>
           <span class="brand__dot"></span>
@@ -192,14 +193,14 @@
         </span>
       </a>
       <div class="site-header__right">
-        <span class="site-edition">
-          <span class="status-pill__dot"></span>
-          V0.5 · STATIC EDITION
-        </span>
-        <span class="site-header__divider"></span>
-        <a class="site-source-mini" href="https://github.com/Yu-Sea/SeeEnglish" target="_blank" rel="noopener noreferrer">
+        <nav class="official-nav" aria-label="主导航">
+          <a class="is-active" href="#intro">介绍</a>
+          <a href="./download.html">下载</a>
+          <a href="./docs.html">文档</a>
+        </nav>
+        <a class="official-github" href="https://github.com/Yu-Sea" target="_blank" rel="noopener noreferrer">
           <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
-          <span>SOURCE</span>
+          <span>GitHub</span>
           <svg class="icon icon--small" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
         </a>
       </div>
@@ -208,11 +209,49 @@
     <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
 
     <main class="site-main">
+      <section class="site-section site-intro" id="intro" data-section="intro">
+        <div class="intro-inner">
+          <div class="section-kicker reveal">00 / SEEENGLISH</div>
+          <div class="intro-mark reveal">
+            <span class="intro-mark__box"><span>S</span><i></i></span>
+            <span class="intro-mark__name">SeeEnglish <em>见词</em></span>
+          </div>
+          <h1 class="intro-title reveal">
+            把遇见的词，<br />
+            <em>留成自己的语言索引。</em>
+          </h1>
+          <p class="intro-copy reveal">
+            一本不会催你的英语笔记。没有每日任务，没有标准答案；你学到什么，就记什么，记了什么，就复习什么。
+          </p>
+          <div class="intro-actions reveal">
+            <a class="button button--primary intro-download" href="./download.html">
+              <svg class="icon icon--small" aria-hidden="true"><use href="#i-download"></use></svg>
+              下载 Windows 版
+              <svg class="icon icon--small" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            </a>
+            <a class="button button--ghost" href="./docs.html">
+              查看使用文档
+              <svg class="icon icon--small" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+            </a>
+          </div>
+          <div class="intro-meta reveal">
+            <span><i></i> 当前版本 v0.6.0</span>
+            <span>Windows 10 / 11</span>
+            <span>本地优先 · 无需登录</span>
+          </div>
+          <a class="scroll-cue" href="#home" aria-label="继续了解 SeeEnglish">
+            <span>往下看</span>
+            <span class="scroll-cue__line"></span>
+            <svg class="icon icon--small" aria-hidden="true"><use href="#i-arrow-down"></use></svg>
+          </a>
+        </div>
+      </section>
+
       <section class="site-section site-home" id="home" data-section="home">
         <div class="home-inner">
           <div class="eyebrow site-eyebrow reveal">
             <span class="eyebrow__line"></span>
-            A NEW KIND OF ENGLISH NOTEBOOK · 见词
+            01 / A NEW KIND OF ENGLISH NOTEBOOK · 见词
           </div>
           <h1 class="home-title reveal">
             一本不会催你的<br />
@@ -266,7 +305,7 @@
             <div class="home-facet">
               <span>03</span>
               <p>只有可见的变化</p>
-              <small>一个总分，记录自己的节奏</small>
+              <small>每个词库一个总分，记录自己的节奏</small>
             </div>
           </div>
 
@@ -281,7 +320,7 @@
       <section class="site-section site-thesis" id="thesis" data-section="home">
         <div class="section-shell">
           <div class="thesis-kicker reveal">
-            <span class="section-kicker">00 / THE THESIS</span>
+            <span class="section-kicker">02 / THE THESIS</span>
             <span class="thesis-kicker__line"></span>
             <span>WHY ANOTHER NOTEBOOK?</span>
           </div>
@@ -329,7 +368,7 @@
       <section class="site-section site-experience" id="experience" data-section="experience">
         <div class="section-shell">
           <header class="section-head reveal">
-            <div class="section-kicker">02 / HANDS-ON</div>
+            <div class="section-kicker">03 / HANDS-ON</div>
             <div class="section-head__row">
               <h2 class="section-title">
                 先感受一下它的节奏。<br />
@@ -489,7 +528,7 @@
                 </div>
                 <span class="section-kicker">BLOCK SETTLED</span>
                 <h3>这一档完成了。</h3>
-                <p class="rd-result__copy">5 次见面为一档。分数已经安静地加入总分。</p>
+                <p class="rd-result__copy">5 次见面为一档。分数已经安静地加入当前词库总分。</p>
                 <div class="rd-result__delta" id="rd-delta">+0.010</div>
                 <div class="rd-result__rows">
                   <div><span>这一档</span><b id="rd-result-accuracy">5 / 5</b></div>
@@ -506,7 +545,7 @@
             <aside class="rd-side">
               <div class="rd-score glass reveal">
                 <div class="rd-score__top">
-                  <span class="section-kicker">GLOBAL SCORE</span>
+                  <span class="section-kicker">LIBRARY SCORE</span>
                   <span class="rd-score__level">有了轮廓</span>
                 </div>
                 <strong class="rd-score__number" id="rd-score">42.680</strong>
@@ -550,7 +589,7 @@
       <section class="site-section site-features" id="features" data-section="features">
         <div class="section-shell">
           <header class="section-head reveal">
-            <div class="section-kicker">03 / THE SYSTEM</div>
+            <div class="section-kicker">04 / THE SYSTEM</div>
             <div class="section-head__row">
               <h2 class="section-title">
                 四个动作，<br />
@@ -582,7 +621,7 @@
               <span class="feature-map__num">03</span>
               <span class="feature-map__icon"><svg class="icon"><use href="#i-library"></use></svg></span>
               <h3>词库</h3>
-              <p>筛选、修改、归档、删除、导出。你的索引，随时可以整理。</p>
+              <p>按 A–Z 分组浏览，整理多个独立词库，也能随时导出或合并备份。</p>
               <span class="feature-map__link">LIBRARY <svg class="icon icon--tiny"><use href="#i-arrow-right"></use></svg></span>
             </a>
             <a class="feature-map__card glass reveal" href="#profile">
@@ -642,7 +681,7 @@
             </div>
             <div class="score-instrument reveal">
               <div class="score-instrument__top">
-                <span class="section-kicker">GLOBAL SCORE</span>
+                <span class="section-kicker">LIBRARY SCORE</span>
                 <span class="score-instrument__level">有了轮廓</span>
               </div>
               <div class="score-instrument__number">42.680</div>
@@ -662,13 +701,15 @@
               <span class="section-kicker">03 / LIBRARY</span>
               <h2>笔记会长大，<br /><em>也需要被整理。</em></h2>
               <p>
-                词库不是一个展示列表，而是你随时可以修改的索引。按归档状态筛选，点开一个词或一句话，
-                修改、归档、删除，或者把整本词库导出成一个文件。
+                词库不是一个展示列表，而是你随时可以修改的索引。列表和 A–Z 栅格两种浏览方式，
+                按归档状态筛选，点开一个词或一句话，修改、归档、删除；也可以建立多个互不干扰的词库，
+                把当前这一本导出成文件，或把旧备份合并回来。
               </p>
               <ul class="feature-list">
-                <li><span>01</span> 全部 / 未归档 / 已归档，单词视图筛选</li>
+                <li><span>01</span> 列表 / A–Z 栅格，首字母纵向分组，从 A 滚到 Z</li>
                 <li><span>02</span> 单词和句子都可以单独修改、删除</li>
-                <li><span>03</span> 导出完整 JSON，词条、例句、关联和复习状态都在里面</li>
+                <li><span>03</span> 多词库：默认词库始终保留，每个词库有独立的词、句和分数</li>
+                <li><span>04</span> 导出 / 导入当前词库的完整 JSON，复习和归档状态都在里面</li>
               </ul>
             </div>
             <div class="index-panel glass reveal">
@@ -710,9 +751,10 @@
                 头像、名字和签名都可以自己决定。
               </p>
               <ul class="feature-list">
-                <li><span>01</span> 学习进度：总分、归档进度、见面和结算次数</li>
-                <li><span>02</span> 最近 30 天分数日趋势，只看自己的曲线</li>
-                <li><span>03</span> 字色、界面动效、漂浮装饰，按自己的习惯来</li>
+                <li><span>01</span> 学习进度：当前词库的总分、归档进度、见面和结算次数</li>
+                <li><span>02</span> 最近 30 天分数日趋势，跟着当前词库切换</li>
+                <li><span>03</span> 六种字色、界面动效、漂浮装饰，按自己的习惯来</li>
+                <li><span>04</span> 沉浸模式：让其他页面的标题退到背景里</li>
               </ul>
             </div>
             <div class="profile-preview reveal">
@@ -747,9 +789,9 @@
                 </div>
               </div>
               <div class="pp-settings glass">
-                <div><span class="section-kicker">APPEARANCE</span><b>字色</b><span class="pp-setting-value">墨蓝 · 石板 · 暖褐</span></div>
+                <div><span class="section-kicker">APPEARANCE</span><b>字色</b><span class="pp-setting-value">6 种 · 含雾粉 / 雾蓝 / 苔绿</span></div>
                 <div><span class="section-kicker">MOTION</span><b>界面动效</b><span class="pp-setting-value">标准</span></div>
-                <div><span class="section-kicker">ATMOSPHERE</span><b>漂浮装饰</b><span class="pp-setting-value">显示</span></div>
+                <div><span class="section-kicker">IMMERSION</span><b>沉浸模式</b><span class="pp-setting-value">开启</span></div>
               </div>
             </div>
           </div>
@@ -758,7 +800,7 @@
             <div class="local-first__head reveal">
               <span class="section-kicker">05 / LOCAL-FIRST</span>
               <h2>你的笔记，只属于你的电脑。</h2>
-              <p>没有账号系统，没有云端同步，也没有“升级会员解锁更多词库”。所有内容保存在本机的 SQLite 文件里。</p>
+              <p>没有账号系统，没有云端同步，也没有付费解锁的词库额度。所有词库和内容都保存在本机的 SQLite 文件里。</p>
             </div>
             <div class="local-first__grid">
               <div class="local-first__card glass reveal">
@@ -768,8 +810,8 @@
               </div>
               <div class="local-first__card glass reveal">
                 <svg class="icon"><use href="#i-download"></use></svg>
-                <h3>JSON 导出</h3>
-                <p>随时把整本词库带走。文件带版本号，为后续导入保留结构。</p>
+                <h3>JSON 导出 / 导入</h3>
+                <p>随时把当前词库带走，也能把一份旧备份合并回来。文件带版本号，导入前会检查格式。</p>
               </div>
               <div class="local-first__card glass reveal">
                 <svg class="icon"><use href="#i-shield"></use></svg>
@@ -781,51 +823,52 @@
         </div>
       </section>
 
-      <section class="site-section site-source" id="source" data-section="source">
+      <section class="site-section site-source site-docs" id="docs" data-section="docs">
         <div class="source-shell">
-          <div class="section-kicker reveal">04 / SOURCE &amp; PHILOSOPHY</div>
+          <div class="section-kicker reveal">05 / DOCUMENTATION</div>
           <h2 class="source-title reveal">
-            你才是自己的<br />
-            英语老师<span class="accent">。</span>
+            把用法和 API，<br />
+            都放在手边<span class="accent">。</span>
           </h2>
           <p class="source-copy reveal">
-            SeeEnglish 不提供标准答案，也不替你决定进度。它只提供一个安静、整齐、属于你的地方，
-            让你把学过的、用过的、联想过的一切留下来，然后慢慢看见自己的变化。
+            从第一次打开 SeeEnglish，到词库整理、复习节奏和本地 API，使用文档里都有完整说明。
+            遇到问题，也可以直接写信联系我们。
           </p>
 
           <div class="source-card glass reveal">
             <div class="source-card__body">
               <div class="source-card__badge">
-                <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
-                <span>GITHUB / SOURCE</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg>
+                <span>DOCS / LOCAL API</span>
               </div>
-              <h3>SeeEnglish 源码</h3>
+              <h3>使用文档 &amp; API</h3>
               <p>
-                正式仓库正在创建中。地址先按项目名保留，后续会在这里直接打开 SeeEnglish 的完整源码。
+                安装与卸载、记词、复习、词库、数据备份，以及本地 API 的请求格式和示例。
+                面向普通用户，也面向想接自己工具的开发者。
               </p>
               <div class="source-actions">
-                <a class="button button--primary source-link" href="https://github.com/Yu-Sea/SeeEnglish" target="_blank" rel="noopener noreferrer">
-                  前往 GitHub
-                  <svg class="icon icon--small" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+                <a class="button button--primary source-link" href="./docs.html">
+                  打开使用文档
+                  <svg class="icon icon--small" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
                 </a>
-                <button class="button button--ghost" id="copy-repo" type="button">
-                  <svg class="icon icon--small" aria-hidden="true"><use href="#i-copy"></use></svg>
-                  复制地址
-                </button>
+                <a class="button button--ghost" href="mailto:we1258357219@163.com">
+                  <svg class="icon icon--small" aria-hidden="true"><use href="#i-user"></use></svg>
+                  联系我们
+                </a>
               </div>
             </div>
             <div class="source-card__side">
-              <span class="source-card__label">IN PREPARATION</span>
-              <code>github.com/<br />Yu-Sea/<br />SeeEnglish</code>
-              <span class="source-card__note">仓库建好后直接生效</span>
+              <span class="source-card__label">START HERE</span>
+              <code>docs.html</code>
+              <span class="source-card__note">使用说明 · API · 常见问题</span>
             </div>
           </div>
 
           <div class="source-stack reveal">
-            <div><span>01</span><p>Python · FastAPI</p></div>
-            <div><span>02</span><p>React · TypeScript</p></div>
-            <div><span>03</span><p>SQLite · Local-first</p></div>
-            <div><span>04</span><p>No account · No cloud</p></div>
+            <div><span>01</span><p>Windows 10 / 11</p></div>
+            <div><span>02</span><p>SQLite · Local-first</p></div>
+            <div><span>03</span><p>无账号 · 无云端</p></div>
+            <div><span>04</span><p>导入 · 导出 · API</p></div>
           </div>
 
           <div class="source-philosophy reveal">
@@ -835,46 +878,49 @@
 
           <div class="source-return reveal">
             <a href="#experience" class="text-link">再体验一次 <svg class="icon icon--small"><use href="#i-arrow-up-right"></use></svg></a>
-            <a href="#home" class="text-link text-link--up">回到顶部 <svg class="icon icon--small"><use href="#i-arrow-down"></use></svg></a>
+            <a href="#intro" class="text-link text-link--up">回到顶部 <svg class="icon icon--small"><use href="#i-arrow-down"></use></svg></a>
           </div>
-
-          <footer class="site-footer">
-            <div class="site-footer__brand">
-              <span class="brand__mark brand__mark--small"><span class="brand__letter">S</span><span class="brand__dot"></span></span>
-              <span>SeeEnglish · 见词</span>
-            </div>
-            <p>Designed with context · Static edition · 2026</p>
-            <p>Built for people who notice words.</p>
-          </footer>
         </div>
       </section>
     </main>
 
-    <nav class="dock" aria-label="页面导航">
-      <div class="dock__surface">
-        <span class="dock__indicator" id="dock-indicator" aria-hidden="true"></span>
-        <a class="dock__item is-active" href="#home" data-nav="home">
-          <svg class="dock__icon icon" aria-hidden="true"><use href="#i-home"></use></svg>
-          <span class="dock__label">首页</span>
-          <span class="dock__english">Home</span>
-        </a>
-        <a class="dock__item" href="#experience" data-nav="experience">
-          <svg class="dock__icon icon" aria-hidden="true"><use href="#i-play"></use></svg>
-          <span class="dock__label">体验</span>
-          <span class="dock__english">Demo</span>
-        </a>
-        <a class="dock__item" href="#features" data-nav="features">
-          <svg class="dock__icon icon" aria-hidden="true"><use href="#i-library"></use></svg>
-          <span class="dock__label">功能</span>
-          <span class="dock__english">Features</span>
-        </a>
-        <a class="dock__item" href="#source" data-nav="source">
-          <svg class="dock__icon icon" aria-hidden="true"><use href="#i-code"></use></svg>
-          <span class="dock__label">源码</span>
-          <span class="dock__english">Source</span>
-        </a>
+    <footer class="official-footer">
+      <div class="official-footer__inner">
+        <div class="official-footer__brand">
+          <a class="brand" href="./index.html" aria-label="SeeEnglish 首页">
+            <span class="brand__mark brand__mark--small"><span class="brand__letter">S</span><span class="brand__dot"></span></span>
+            <span class="brand__copy">
+              <span class="brand__name">SeeEnglish</span>
+              <span class="brand__cn">见词 · 语言索引</span>
+            </span>
+          </a>
+          <p>一本不会催你的英语笔记。<br />本地优先，安静地记录你遇见的词。</p>
+        </div>
+        <div class="official-footer__columns">
+          <div>
+            <h3>产品</h3>
+            <a href="#intro">介绍</a>
+            <a href="./download.html">下载 Windows 版</a>
+            <a href="./docs.html">使用文档</a>
+          </div>
+          <div>
+            <h3>资源</h3>
+            <a href="./docs.html#install">快速开始</a>
+            <a href="./docs.html#api">API 文档</a>
+            <a href="./docs.html#faq">常见问题</a>
+          </div>
+          <div>
+            <h3>联系</h3>
+            <a href="mailto:we1258357219@163.com">we1258357219@163.com</a>
+            <a href="https://github.com/Yu-Sea" target="_blank" rel="noopener noreferrer">GitHub 主页</a>
+          </div>
+        </div>
       </div>
-    </nav>
+      <div class="official-footer__bottom">
+        <span>© 2026 SeeEnglish 见词</span>
+        <span>Local-first · No account · No cloud</span>
+      </div>
+    </footer>
 
     <div class="site-toast" id="site-toast" role="status" aria-live="polite"></div>
 

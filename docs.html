@@ -31,7 +31,7 @@
           <a href="./download.html">下载</a>
           <a class="is-active" href="./docs.html">文档</a>
         </nav>
-        <a class="official-github" href="https://github.com/Yu-Sea" target="_blank" rel="noopener noreferrer">
+        <a class="official-github" href="https://github.com/Yu-Sea/SeeEnglish" target="_blank" rel="noopener noreferrer">
           <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.73.81 1.17 1.83 1.17 3.09 0 4.41-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.11 0 1.52-.01 2.75-.01 3.13 0 .31.21.67.8.56C20.22 21.38 23.5 17.07 23.5 12 23.5 5.73 18.27.5 12 .5z"></path></svg>
           <span>GitHub</span>
         </a>
@@ -55,6 +55,7 @@
           <a href="#capture">记词</a>
           <a href="#review">复习</a>
           <a href="#library">词库</a>
+          <a href="#shortcuts">快捷键</a>
           <a href="#profile">个人与设置</a>
           <a href="#transfer">多词库与导入导出</a>
         </div>
@@ -100,7 +101,7 @@
               <tr><td>桌面程序</td><td>Windows 10 / 11，当前用户安装，支持系统托盘保活</td></tr>
               <tr><td>本地 API</td><td><code>http://127.0.0.1:8765/api</code></td></tr>
               <tr><td>数据目录</td><td><code>%APPDATA%\SeeEnglish\seeenglish.db</code></td></tr>
-              <tr><td>当前版本</td><td>0.6.0</td></tr>
+              <tr><td>当前版本</td><td>1.0.0</td></tr>
             </tbody>
           </table>
         </section>
@@ -195,6 +196,59 @@
           <p>切换到“句子”可以单独浏览所有例句，并直接修改或删除某一句。修改句子不会影响词条的其他内容。</p>
         </section>
 
+        <section id="shortcuts">
+          <h2>快捷键</h2>
+          <p>
+            记词、复习和词库都可以只用键盘完成。所有按键遵循同一条规则：
+            <strong>回车不会跳过步骤</strong>。光标在输入框里时，回车先确认这段内容并让光标离开，
+            主按钮随之亮起，再按一次回车才真正执行。
+          </p>
+
+          <h3>通用</h3>
+          <table class="docs-table">
+            <thead><tr><th>按键</th><th>作用</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>Ctrl</kbd> + <kbd>F</kbd></td><td>聚焦当前页面的搜索框</td></tr>
+              <tr><td><kbd>/</kbd></td><td>同上，光标不在输入框里时可用</td></tr>
+              <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>在多条候选之间移动</td></tr>
+              <tr><td><kbd>Tab</kbd></td><td>取当前候选放进输入框，并展开详情</td></tr>
+              <tr><td><kbd>Enter</kbd></td><td>执行亮起的主按钮；在输入框里先确认内容</td></tr>
+              <tr><td><kbd>Shift</kbd> + <kbd>Enter</kbd></td><td>在输入框里换行</td></tr>
+              <tr><td><kbd>Esc</kbd></td><td>返回上一级，关闭最上面一层</td></tr>
+            </tbody>
+          </table>
+
+          <h3>记词</h3>
+          <ul>
+            <li>输入单词后出现多条匹配：用 <kbd>↑</kbd> <kbd>↓</kbd> 选择，<kbd>Enter</kbd> 或 <kbd>Tab</kbd> 取当前项；没有选择时默认取第一条。</li>
+            <li>匹配列表的最后一项是「新词条」，选中它会把当前输入单独收录，不补充已有词。</li>
+            <li>补充卡片里，<kbd>Enter</kbd> 先把当前输入框的内容确认掉，按钮亮起后再按一次才保存。</li>
+            <li>在补充卡片里按 <kbd>Ctrl</kbd> + <kbd>F</kbd> 会直接跳到关联词搜索。</li>
+            <li><kbd>Esc</kbd> 关闭补充卡片并放弃这次编辑。已经保存成功之后，<kbd>Esc</kbd> 不会撤销这次保存。</li>
+          </ul>
+
+          <h3>复习</h3>
+          <ul>
+            <li>写下答案后，<kbd>Enter</kbd> 确认输入，再按一次翻开记录。</li>
+            <li>翻开后默认选中「想起来了」，用 <kbd>←</kbd> <kbd>→</kbd> 在「还差一点 / 想起来了」之间切换，<kbd>Enter</kbd> 确认。</li>
+            <li>结果页默认选中「再遇一个」，直接按 <kbd>Enter</kbd> 进入下一个词。</li>
+            <li>归档确认出现时，<kbd>Esc</kbd> 取消。</li>
+          </ul>
+
+          <h3>词库</h3>
+          <ul>
+            <li><kbd>/</kbd> 或 <kbd>Ctrl</kbd> + <kbd>F</kbd> 聚焦搜索框。</li>
+            <li><kbd>↑</kbd> <kbd>↓</kbd> 在词条之间移动，<kbd>Enter</kbd> 展开或收起当前词条。</li>
+            <li><kbd>Esc</kbd> 先收起展开的词条，再按一次清空搜索。</li>
+            <li>在搜索框里按 <kbd>Tab</kbd> 或 <kbd>Enter</kbd>，会把第一条匹配的词填进搜索框并展开它。</li>
+            <li>打开编辑、导入导出或选择词库时，<kbd>Esc</kbd> 按层级依次关闭。</li>
+          </ul>
+
+          <div class="docs-callout">
+            快捷键只在应用窗口内生效，不占用系统级热键；窗口最小化到系统托盘后不会再响应这些按键。
+          </div>
+        </section>
+
         <section id="profile">
           <h2>个人与设置</h2>
           <p>个人页面显示当前词库的总掌握分、最近 30 天趋势、见面次数和结算次数。所有统计都基于当前选中的词库。</p>
@@ -245,7 +299,7 @@ Invoke-RestMethod http://127.0.0.1:8765/api/health</code></pre>
           <pre><code>{
   "status": "ok",
   "service": "seeenglish",
-  "version": "0.6.0"
+  "version": "1.0.0"
 }</code></pre>
         </section>
 
@@ -383,7 +437,7 @@ curl -X POST "http://127.0.0.1:8765/api/import?library_id=1" \
           <h2>联系我们</h2>
           <p>使用、安装或 API 接入遇到问题，欢迎发邮件：</p>
           <p><a href="mailto:we1258357219@163.com">we1258357219@163.com</a></p>
-          <p>也可以在 <a href="https://github.com/Yu-Sea" target="_blank" rel="noopener noreferrer">GitHub</a> 查看项目动态。</p>
+          <p>也可以在 <a href="https://github.com/Yu-Sea/SeeEnglish" target="_blank" rel="noopener noreferrer">GitHub</a> 查看项目动态。</p>
           <div class="docs-footer">
             <span>SeeEnglish 见词 · 文档 · 2026</span><br />
             <a href="./index.html">返回官网</a> · <a href="./download.html">下载 Windows 版</a> · <a href="mailto:we1258357219@163.com">联系邮箱</a>

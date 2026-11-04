@@ -32,7 +32,7 @@
           <a class="is-active" href="./download.html">下载</a>
           <a href="./docs.html">文档</a>
         </nav>
-        <a class="official-github" href="https://github.com/Yu-Sea" target="_blank" rel="noopener noreferrer">
+        <a class="official-github" href="https://github.com/Yu-Sea/SeeEnglish" target="_blank" rel="noopener noreferrer">
           <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.73.81 1.17 1.83 1.17 3.09 0 4.41-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.11 0 1.52-.01 2.75-.01 3.13 0 .31.21.67.8.56C20.22 21.38 23.5 17.07 23.5 12 23.5 5.73 18.27.5 12 .5z"></path></svg>
           <span>GitHub</span>
         </a>
@@ -50,7 +50,7 @@
           <div class="download-actions">
             <a
               class="button button--primary"
-              href="https://seeenglish.oss-cn-hangzhou.aliyuncs.com/SeeEnglish-Setup-0.6.0.exe"
+              href="https://seeenglish.oss-cn-hangzhou.aliyuncs.com/SeeEnglish-Setup-1.0.0.exe"
             >
               <svg class="icon icon--small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><polyline points="6 10 12 16 18 10"></polyline><path d="M4 20h16"></path></svg>
               下载 Windows 版
@@ -58,7 +58,7 @@
             </a>
             <a class="button button--ghost" href="./docs.html">先看使用文档</a>
           </div>
-          <p class="download-note">点击即可从对象存储下载安装包，当前仅提供 Windows 版本。</p>
+          <p class="download-note">默认下载最新版本 1.0.0，历史版本收在下方，仅建议需要回退时使用。</p>
         </div>
 
         <aside class="download-card" aria-label="安装包信息">
@@ -72,7 +72,7 @@
             </div>
           </div>
           <div class="download-card__rows">
-            <div><span>当前版本</span><b>0.6.0</b></div>
+            <div><span>当前版本</span><b>1.0.0</b></div>
             <div><span>安装包大小</span><b>约 128 MB</b></div>
             <div><span>安装方式</span><b>当前用户安装，无需管理员</b></div>
             <div><span>数据位置</span><b>%APPDATA%\SeeEnglish</b></div>
@@ -85,13 +85,83 @@
         </aside>
       </section>
 
+      <section class="download-section download-releases" id="releases">
+        <div class="download-releases__head">
+          <h2>下载版本</h2>
+          <p>默认提供最新版本。旧版本保留在下方，只在需要回退时使用。</p>
+        </div>
+
+        <div class="release-latest">
+          <div class="release-latest__main">
+            <span class="release-latest__tag">最新版本</span>
+            <b class="release-latest__version">1.0.0</b>
+            <span class="release-latest__meta">2026-11-04 · Windows 10 / 11 · x64 · 约 122 MB</span>
+            <span class="release-latest__file">SeeEnglish-Setup-1.0.0.exe</span>
+          </div>
+          <a
+            class="button button--primary release-latest__action"
+            href="https://seeenglish.oss-cn-hangzhou.aliyuncs.com/SeeEnglish-Setup-1.0.0.exe"
+          >
+            <svg class="icon icon--small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><polyline points="6 10 12 16 18 10"></polyline><path d="M4 20h16"></path></svg>
+            下载 1.0.0
+          </a>
+        </div>
+
+        <details class="release-history">
+          <summary>
+            <span>历史版本</span>
+            <i>1 个</i>
+          </summary>
+          <div class="release-history__list">
+            <div class="release-history__row">
+              <div>
+                <b>0.6.0</b>
+                <span>首个公开版本 · 约 128 MB · Windows 10 / 11</span>
+              </div>
+              <a
+                class="release-history__link"
+                href="https://seeenglish.oss-cn-hangzhou.aliyuncs.com/SeeEnglish-Setup-0.6.0.exe"
+              >
+                下载
+              </a>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <section class="download-section" id="changelog">
+        <h2>更新说明</h2>
+        <div class="release-notes">
+          <article class="release-note">
+            <header>
+              <b>1.0.0</b>
+              <span>2026-11-04</span>
+            </header>
+            <ul>
+              <li>记词、复习、词库都支持键盘操作：↑↓ 选择、Tab 展开、Enter 确认、Esc 返回。</li>
+              <li>补充页可以搜索关联词，打开时会带出已有的例句、联想和关联。</li>
+              <li>关于页新增技术支持，启动画面不再显示署名。</li>
+            </ul>
+          </article>
+          <article class="release-note">
+            <header>
+              <b>0.6.0</b>
+              <span>首个版本</span>
+            </header>
+            <ul>
+              <li>首个公开版本：记词、复习、词库、多词库与导入导出、本地 API。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <section class="download-section">
         <h2>安装只需要三步</h2>
         <div class="download-grid">
           <article class="download-step">
             <span class="download-step__num">01 / DOWNLOAD</span>
             <h3>下载安装包</h3>
-            <p>点击上方按钮下载 <code>SeeEnglish-Setup-0.6.0.exe</code>。文件会通过阿里云对象存储直接传输。</p>
+            <p>点击上方按钮下载 <code>SeeEnglish-Setup-1.0.0.exe</code>。文件会通过阿里云对象存储直接传输。</p>
           </article>
           <article class="download-step">
             <span class="download-step__num">02 / INSTALL</span>
@@ -166,7 +236,7 @@
           <div>
             <h3>联系</h3>
             <a href="mailto:we1258357219@163.com">we1258357219@163.com</a>
-            <a href="https://github.com/Yu-Sea" target="_blank" rel="noopener noreferrer">GitHub 主页</a>
+            <a href="https://github.com/Yu-Sea/SeeEnglish" target="_blank" rel="noopener noreferrer">GitHub 主页</a>
           </div>
         </div>
       </div>

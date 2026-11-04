@@ -555,6 +555,228 @@
   line-height: 1.8;
 }
 
+/* ---------- 版本下载 ---------- */
+
+.download-releases__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+.download-releases__head p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 9.5px;
+}
+
+.release-latest {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 20px 22px;
+  border: 1px solid rgba(31, 100, 221, 0.19);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: var(--shadow-sm);
+}
+
+.release-latest__main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.release-latest__tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.release-latest__version {
+  margin-top: 5px;
+  color: var(--ink-deep);
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.release-latest__meta {
+  color: var(--faint);
+  font-size: 9px;
+}
+
+.release-latest__file {
+  margin-top: 2px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  overflow-wrap: anywhere;
+}
+
+.release-latest__action {
+  flex: 0 0 auto;
+  height: 44px;
+  padding: 0 19px;
+  font-size: 11.5px;
+}
+
+.release-history {
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+
+.release-history summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 18px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.release-history summary::-webkit-details-marker {
+  display: none;
+}
+
+.release-history summary i {
+  color: var(--faint);
+  font-size: 8.5px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.release-history summary::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  margin-left: auto;
+  border-right: 1.5px solid var(--faint);
+  border-bottom: 1.5px solid var(--faint);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.release-history[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.release-history__list {
+  padding: 0 18px 6px;
+}
+
+.release-history__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.release-history__row b {
+  display: block;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.release-history__row span {
+  display: block;
+  margin-top: 2px;
+  color: var(--faint);
+  font-size: 8.5px;
+}
+
+.release-history__link {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 9.5px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31, 100, 221, 0.3);
+}
+
+.release-history__link:hover {
+  border-bottom-color: currentColor;
+}
+
+.release-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.release-note {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.release-note header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.release-note header b {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.release-note header span {
+  color: var(--faint);
+  font-size: 8.5px;
+}
+
+.release-note ul {
+  margin: 10px 0 0;
+  padding-left: 16px;
+}
+
+.release-note li {
+  color: var(--ink-soft);
+  font-size: 9.5px;
+  line-height: 1.85;
+}
+
+@media (max-width: 760px) {
+  .release-latest {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .release-latest__action {
+    width: 100%;
+  }
+
+  .release-notes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .download-warning svg {
   flex: 0 0 auto;
   margin-top: 2px;
